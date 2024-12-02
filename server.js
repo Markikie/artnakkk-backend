@@ -22,8 +22,14 @@ connectCloudinary();
 app.use(express.json());
 app.use(cors());
 
+const corsOptions = {
+  origin: 'https://addmin-nakkkart.vercel.app/',
+  credentials: true,
+};
+app.use(cors(corsOptions));
+
 const allowedOrigins = [
-  "https://addmin-nakkkart.vercel.app/",
+  "https://artnakkk-frontend-admin.vercel.app",
   "https://artnakkk-backend-3xxl.onrender.com",
   "http://localhost:5175", // For local development
   "http://localhost:5176", // For local development
