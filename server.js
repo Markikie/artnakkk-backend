@@ -22,10 +22,6 @@ connectCloudinary();
 app.use(express.json());
 app.use(cors());
 
-const corsOptions = {
-  origin: 'https://addmin-nakkkart.vercel.app',
-  credentials: true,
-};
 app.use(cors(corsOptions));
 
 const allowedOrigins = [
